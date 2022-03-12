@@ -2,6 +2,7 @@ import CompanyCard from "./CompanyCard";
 import SearchForm from "./SearchForm";
 import JoblyApi from "./api";
 import { useEffect, useState } from "react";
+import './CompanyCard.css';
 
 
 /**
@@ -50,9 +51,9 @@ function CompanyList() {
     // CR: might not need isFetching || VVV
     // CR: could pass down company obj and destructure in compcard, 
     return (
-        <div>
+        <div className="CompanyList">
             {isFetching ||
-                < div >
+                < div className="CompanyList" >
                     <SearchForm addSearchCriteria={filterCompaniesByInput} />
                     {companyList.map(comp => {
                         return (
