@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import image from "./pexels-pixabay-434337.jpg"
+
 
 /**
  *  Handles registering a new user by providing form data to a submission handling
@@ -48,7 +50,12 @@ function SignUpForm({ handleSignUp }) {
   }
 
   return (
-    <form className="ProfileForm" onSubmit={handleSubmission}>
+    <div className="bg-image d-flex align-items-center" style={{
+      "background-image":
+      `url(${image})`,
+      height: "95vh",
+    }}>
+    <form className="ProfileForm mx-auto" onSubmit={handleSubmission}>
       <div>
         {isError && isError.map((e, i) => <p key={i}>{e}</p>)}
         <label htmlFor="username">Username</label>
@@ -110,6 +117,7 @@ function SignUpForm({ handleSignUp }) {
       </div>
       <button>Save Changes</button>
     </form>
+    </div>
   );
 }
 

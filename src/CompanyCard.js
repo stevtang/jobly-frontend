@@ -16,15 +16,19 @@ function CompanyCard({ handle, name, description, numEmployees, logoUrl }) {
     console.log("Entering CompanyCard, data:", logoUrl);
     // CR: wrap link with div and give classname to div not Link
     return (
-        <Link className="CompanyCardLink" to={`/companies/${handle}`}>
-            <div className="CompanyCard">
-                <img className="CompanyCardImage" src={logo} alt="logo" />
-                <h3>{name}</h3>
-                <p>About: {description}</p>
-                <p>Total Employees: {numEmployees}</p>
+        <div className="CompanyCardLink">
+            <Link class="CompanyCard card text-black bg-secondary mb-3" style={{ 'max-width': "40rem"}} to={`/companies/${handle}`}>
+            <div class="card-header text-start">{name}      <img className="CompanyCardImage float-end" src={logo} alt="logo" /></div>
+            
+
+            <div class="card-body">
+                <p class="card-text text-start">About: {description}</p>
+                <p class="card-text text-start">Total Employees: {numEmployees}</p>
             </div>
-        </Link>
+            </Link>
+        </div>
     );
 }
 
 export default CompanyCard;
+

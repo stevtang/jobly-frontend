@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import image from "./pexels-pixabay-434337.jpg"
 
 /**
  *  Handles user login by providing form data to a submission handling
@@ -25,6 +26,7 @@ function LoginForm({ handleLogin }) {
 
   async function handleSubmission(evt) {
     evt.preventDefault();
+    
     try {
       await handleLogin(formData);
       setFormSubmitted(true);
@@ -46,7 +48,15 @@ function LoginForm({ handleLogin }) {
   }
 
   return (
-    <form className="LoginForm" onSubmit={handleSubmission}>
+
+    <div className="bg-image d-flex align-items-center" style={{
+      "background-image":
+      `url(${image})`,
+      height: "95vh",
+      
+    }}>
+      
+    <form className="LoginForm mx-auto" onSubmit={handleSubmission}>
       <div>
         {isError && isError.map((e, i) => <p key={i}>{e}</p>)}
         <div>
@@ -73,9 +83,11 @@ function LoginForm({ handleLogin }) {
           ></input>
         </div>
       </div>
-
-      <button>Submit</button>
+      
+      <button className="btn btn-sm btn-dark m-4 pt-1 pb-1">Submit</button>
     </form>
+    </div>
+
   );
 }
 

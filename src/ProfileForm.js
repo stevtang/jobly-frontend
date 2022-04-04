@@ -49,7 +49,7 @@ function ProfileForm({ updatePreferences }) {
     <form className="ProfileForm" onSubmit={handleSubmission}>
       {isError && isError.map((e, i) => <p key={i}>{e}</p>)}
       <div>
-        <label htmlFor="username">Username</label>
+      <label htmlFor="username" class="col-sm-2 col-form-label">Username</label>
       </div>
       <div>
         <input
@@ -61,7 +61,7 @@ function ProfileForm({ updatePreferences }) {
         ></input>
       </div>
       <div>
-        <label htmlFor="firstName">First Name</label>
+      <label htmlFor="firstName" class="col-sm-2 col-form-label">First Name</label>
       </div>
       <div>
         <input
@@ -72,7 +72,7 @@ function ProfileForm({ updatePreferences }) {
         ></input>
       </div>
       <div>
-        <label htmlFor="lastName">Last Name</label>
+      <label htmlFor="lastName" class="col-sm-2 col-form-label">Last Name</label>
       </div>
       <div>
         <input
@@ -83,7 +83,8 @@ function ProfileForm({ updatePreferences }) {
         ></input>
       </div>
       <div>
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email" class="col-sm-2 col-form-label">Email</label>
+        
       </div>
       <div>
         <input

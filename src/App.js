@@ -23,7 +23,7 @@ function App() {
     localStorage.getItem("joblyToken") || null
   );
   const [user, setUser] = useState(null);
-
+  
   console.log("localstorage second", localStorage.getItem("joblyToken"));
   useEffect(
     function getUserOnTokenChange() {
