@@ -1,4 +1,4 @@
-![alt text](/public/public/JoblyScreen2.png)
+![jobly_screenshot](/jobly-frontend/public/public/JoblyScreen2.png)
 
 ## Available Scripts
 
