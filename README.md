@@ -1,4 +1,4 @@
-![jobly_screenshot](/jobly-frontend/public/public/JoblyScreen2.png)
+![jobly_screenshot](https://github.com/stevtang/jobly-frontend/public/JoblyScreen2.png?raw=true)
 
 ## Available Scripts
 
