@@ -1,4 +1,4 @@
-![alt text](https://github.com/stevtang/jobly-frontend/public/public/JoblyScreen2.png?raw=true)
+![alt text](https://github.com/stevtang/jobly-frontend/public/public/JoblyScreen2.png)
 
 ## Available Scripts
 
